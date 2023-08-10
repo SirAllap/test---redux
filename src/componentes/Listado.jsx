@@ -34,19 +34,6 @@ const Listado = () => {
     buscarUno(index)
   }
 
-  // useEffect(() => {
-  //   const options = {
-  //     headers: {
-  //       'X-RapidAPI-Key': '3e8ec3e4a3mshafa5b7b71b92b3dp151361jsn8e43f9ed44d1',
-  //       'X-RapidAPI-Host': 'myanimelist.p.rapidapi.com',
-  //     },
-  //   }
-  //   fetch('https://myanimelist.p.rapidapi.com/anime/top/all', options)
-  //     .then((response) => response.json())
-  //     .then((datos) => setCandidatos(datos.results))
-  //   // .then((datos) => setCandidatos(datos))
-  // }, [])
-
   return (
     <>
       <h1>Candidatos</h1>
