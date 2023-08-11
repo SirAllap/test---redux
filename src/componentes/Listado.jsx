@@ -38,7 +38,7 @@ const Listado = () => {
     <>
       <h1>Candidatos</h1>
       <Link to='/gestion'>
-        <button>Trabajadores</button>
+        <button className='top-button'>Trabajadores</button>
       </Link>
       <div className='presentacion'>
         {candidatos.map((valor, index) => (

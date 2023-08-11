@@ -112,3 +112,16 @@ button:hover {
   background-color: white;
   color: green;
 }
+
+.top-button {
+  position: relative;
+  height: 50px;
+  width: 150px;
+  background-color: #7b96f6;
+  color: white;
+  left: calc(50% - 75px);
+}
+
+.top-button:hover {
+  background-color: #53639c;
+}
