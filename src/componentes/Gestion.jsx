@@ -31,10 +31,12 @@ const Gestion = () => {
   )
   return (
     <>
-      <h1>Trabajadores:</h1>
-      <Link to='/candidatos'>
-        <button className='top-button'>Candidatos</button>
-      </Link>
+      <h1 className='title-trabajadores'>Trabajadores:</h1>
+      <div className='upper-buttons'>
+        <Link to='/candidatos'>
+          <button className='top-button button-candidatos'>Candidatos</button>
+        </Link>
+      </div>
       <div className='usuarios'>
         {listaTrabajadores.map((valor, index) => (
           <Trabajador

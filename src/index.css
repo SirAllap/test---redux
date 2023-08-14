@@ -27,6 +27,19 @@ h1 {
   background-color: #3c3b3b66;
 }
 
+.title-trabajadores {
+  background-color: #7b96f6ec;
+  color: rgb(76, 76, 76);
+}
+.title-candidatos {
+  background-color: #34c2a1ec;
+  color: rgb(76, 76, 76);
+}
+.title-candidatos-ocultos {
+  background-color: #f6a87bec;
+  color: rgb(76, 76, 76);
+}
+
 img {
   min-height: 150px;
   vertical-align: top;
@@ -123,19 +136,40 @@ button:hover {
   color: green;
 }
 
+.upper-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .top-button {
   position: relative;
   height: 70px;
   width: 190px;
   background-color: #7b96f6;
   color: white;
-  left: calc(50% - 95px);
   font-size: 20px;
   font-weight: 600;
 }
 
+.button-candidatos {
+  background-color: rgb(52, 194, 161);
+}
+
 .top-button:hover {
   background-color: #53639c;
+}
+.top-button-oculto {
+  position: relative;
+  height: 70px;
+  width: 190px;
+  background-color: #f6a87b;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.top-button-oculto:hover {
+  background-color: #f6a87b91;
 }
 
 .footerButtons {
@@ -178,4 +212,24 @@ button:hover {
 
 .ocultados button:hover {
   background-color: rgba(176, 59, 59, 0.593);
+}
+
+.usuarios {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #3c3b3b48;
+}
+.columna {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px dotted rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+.stronger {
+  font-weight: 900;
 }

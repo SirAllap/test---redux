@@ -45,10 +45,15 @@ const Listado = () => {
 
   return (
     <>
-      <h1>Candidatos</h1>
-      <Link to='/gestion'>
-        <button className='top-button'>Trabajadores</button>
-      </Link>
+      <h1 className='title-candidatos'>Candidatos</h1>
+      <div className='upper-buttons'>
+        <Link to='/gestion'>
+          <button className='top-button'>Trabajadores</button>
+        </Link>
+        <Link to='/ocultos'>
+          <button className='top-button-oculto'>Ocultos</button>
+        </Link>
+      </div>
       <div className='presentacion'>
         {candidatos.map((valor, index) => (
           <Candidato
@@ -75,7 +80,7 @@ const Listado = () => {
         <div className='ocultados'>
           <h2>Candidatos ocultados:</h2>
           {listaTrabajadoresOcultos.map((valor, i) => (
-            <Link key={i} to='/ocultados'>
+            <Link key={i} to='/ocultos'>
               <button>{valor.name.first}</button>
             </Link>
           ))}
