@@ -53,13 +53,22 @@ const Listado = () => {
       </div>
 
       <hr />
-
-      <div className='candidatos'>
-        {listaTrabajadores.map((valor, i) => (
-          <Link key={i} to='/gestion'>
+      <div className='footerButtons'>
+        <div className='candidatos'>
+          {listaTrabajadores.map((valor, i) => (
+            <Link key={i} to='/gestion'>
+              <button>{valor.name.first}</button>
+            </Link>
+          ))}
+        </div>
+        <div className='ocultados'>
+          <button>OCULTADOS</button>
+          {/* {listaTrabajadoresOcultados.map((valor, i) => (
+          <Link key={i} to='/ocultados'>
             <button>{valor.name.first}</button>
           </Link>
-        ))}
+        ))} */}
+        </div>
       </div>
     </>
   )
