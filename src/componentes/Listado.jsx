@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Candidato from './Candidato'
 // import AnimeCard from './AnimeCard '
 import { useDispatch, useSelector } from 'react-redux'
-import { agregarUnvalor, agregarUnvalorOculto } from '../store/miSlice'
+import {
+  agregarUnvalor,
+  agregarUnvalorOculto,
+  eliminarUnValorOculto,
+} from '../store/miSlice'
 import { Link } from 'react-router-dom'
 
 const Listado = () => {
@@ -43,6 +47,18 @@ const Listado = () => {
     buscarUno(index)
   }
 
+  const revertirOcultoFromList = (valor) => {
+    const nuevoRevertirOculto = { ...valor, departamento: '' }
+    dispatch(agregarUnvalor(nuevoRevertirOculto))
+    dispatch(
+      eliminarUnValorOculto({
+        nombre: valor.name.first,
+        apellido: valor.name.last,
+        telefono: valor.cell,
+      })
+    )
+  }
+
   return (
     <>
       <h1 className='title-candidatos'>Candidatos</h1>
@@ -78,11 +94,21 @@ const Listado = () => {
           ))}
         </div>
         <div className='ocultados'>
-          <h2>Candidatos ocultados:</h2>
+          <h2 className='fullWidth'>Candidatos ocultados:</h2>
           {listaTrabajadoresOcultos.map((valor, i) => (
-            <Link key={i} to='/ocultos'>
-              <button>{valor.name.first}</button>
-            </Link>
+            <div key={i} className='hiddenCandidates'>
+              <Link key={i} to='/ocultos'>
+                <button>{valor.name.first}</button>
+              </Link>
+              <button
+                className='icons'
+                onClick={() => revertirOcultoFromList(valor)}
+              >
+                <span className='material-symbols-outlined'>
+                  settings_backup_restore
+                </span>
+              </button>
+            </div>
           ))}
         </div>
       </div>

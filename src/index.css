@@ -208,6 +208,8 @@ button:hover {
 
 .ocultados {
   width: 39vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ocultados button {
@@ -242,4 +244,26 @@ button:hover {
 
 .stronger {
   font-weight: 900;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 48;
+  color: black;
+}
+
+.ocultados .icons {
+  background-color: yellow;
+  width: 40px;
+  position: relative;
+  right: 9px;
+}
+.ocultados .icons:hover {
+  background-color: rgba(255, 255, 0, 0.531);
+}
+
+.hiddenCandidates {
+  display: flex;
+}
+.ocultados .fullWidth {
+  width: 100%;
 }
