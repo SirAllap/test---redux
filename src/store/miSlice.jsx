@@ -26,6 +26,15 @@ export const miSlice = createSlice({
           valor.cell !== telefono
       )
     },
+    eliminarUnValorOculto: (state, action) => {
+      const { nombre, apellido, telefono } = action.payload
+      state.trabajadoresOcultos = state.trabajadoresOcultos.filter(
+        (valor) =>
+          valor.name.first !== nombre &&
+          valor.name.last !== apellido &&
+          valor.cell !== telefono
+      )
+    },
   },
 })
 
@@ -48,4 +57,5 @@ export const { agregarUnvalor } = miSlice.actions
 export const { modificarUnValor } = miSlice.actions
 export const { eliminarUnValor } = miSlice.actions
 export const { agregarUnvalorOculto } = miSlice.actions
+export const { eliminarUnValorOculto } = miSlice.actions
 // export default miSlice.reducer

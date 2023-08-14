@@ -135,6 +135,16 @@ button:hover {
   background-color: white;
   color: green;
 }
+.azul {
+  background-color: #7b96f6;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+.azul:hover {
+  background-color: #7b96f6ad;
+  color: white;
+}
 
 .upper-buttons {
   display: flex;

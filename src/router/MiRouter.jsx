@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom'
 import Listado from '../componentes/Listado'
 import Gestion from '../componentes/Gestion'
 import Ocultos from '../componentes/Ocultos'
-// import Gestion from '../componentes/Gestion'
 
 const MiRouter = () => {
   return (

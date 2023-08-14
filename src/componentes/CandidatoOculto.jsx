@@ -1,12 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import Candidato from './Candidato'
 
-const Candidato = ({
-  index,
-  valor,
-  onBuscarUno,
-  onGuardarUno,
-  onGuardarOculto,
-}) => {
+const CandidatoOculto = ({ valor, index, onRevertirOculto }) => {
   return (
     <>
       <div className='presentacion'>
@@ -30,16 +26,10 @@ const Candidato = ({
           </div>
           <div className='botones'>
             <button
-              onClick={() => onGuardarOculto(valor, index)}
-              className='rojo'
+              className='azul'
+              onClick={() => onRevertirOculto(valor, index)}
             >
-              Ocultar
-            </button>
-            <button
-              onClick={() => onGuardarUno(valor, index)}
-              className='verde'
-            >
-              Guardar
+              Revertir & Guardar
             </button>
           </div>
         </div>
@@ -48,4 +38,4 @@ const Candidato = ({
   )
 }
 
-export default Candidato
+export default CandidatoOculto
