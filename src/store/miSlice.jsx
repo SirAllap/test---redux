@@ -4,10 +4,14 @@ export const miSlice = createSlice({
   name: 'misTrabajadores',
   initialState: {
     trabajadores: [],
+    trabajadoresOcultos: [],
   },
   reducers: {
     agregarUnvalor: (state, action) => {
       state.trabajadores = [...state.trabajadores, action.payload]
+    },
+    agregarUnvalorOculto: (state, action) => {
+      state.trabajadoresOcultos = [...state.trabajadoresOcultos, action.payload]
     },
     modificarUnValor: (state, action) => {
       const { indice, nuevoContinente } = action.payload
@@ -43,4 +47,5 @@ export const departamentosSlice = createSlice({
 export const { agregarUnvalor } = miSlice.actions
 export const { modificarUnValor } = miSlice.actions
 export const { eliminarUnValor } = miSlice.actions
+export const { agregarUnvalorOculto } = miSlice.actions
 // export default miSlice.reducer

@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import Candidato from './Candidato'
 // import AnimeCard from './AnimeCard '
 import { useDispatch, useSelector } from 'react-redux'
-import { agregarUnvalor } from '../store/miSlice'
+import { agregarUnvalor, agregarUnvalorOculto } from '../store/miSlice'
 import { Link } from 'react-router-dom'
 
 const Listado = () => {
   const [candidatos, setCandidatos] = useState([])
   const listaTrabajadores = useSelector(
     (state) => state.misTrabajadores.trabajadores
+  )
+  const listaTrabajadoresOcultos = useSelector(
+    (state) => state.misTrabajadores.trabajadoresOcultos
   )
   const dispatch = useDispatch()
 
@@ -26,6 +29,12 @@ const Listado = () => {
         provisional[indice] = { ...datos.results[0] }
         setCandidatos(provisional)
       })
+  }
+
+  const guardarOculto = (valor, index) => {
+    const nuevoValorOculto = { ...valor, departamento: '' }
+    dispatch(agregarUnvalorOculto(nuevoValorOculto))
+    buscarUno(index)
   }
 
   const guardarUno = (valor, index) => {
@@ -48,6 +57,7 @@ const Listado = () => {
             valor={valor}
             onBuscarUno={buscarUno}
             onGuardarUno={guardarUno}
+            onGuardarOculto={guardarOculto}
           />
         ))}
       </div>
@@ -55,6 +65,7 @@ const Listado = () => {
       <hr />
       <div className='footerButtons'>
         <div className='candidatos'>
+          <h2>Candidatos guardados:</h2>
           {listaTrabajadores.map((valor, i) => (
             <Link key={i} to='/gestion'>
               <button>{valor.name.first}</button>
@@ -62,12 +73,12 @@ const Listado = () => {
           ))}
         </div>
         <div className='ocultados'>
-          <button>OCULTADOS</button>
-          {/* {listaTrabajadoresOcultados.map((valor, i) => (
-          <Link key={i} to='/ocultados'>
-            <button>{valor.name.first}</button>
-          </Link>
-        ))} */}
+          <h2>Candidatos ocultados:</h2>
+          {listaTrabajadoresOcultos.map((valor, i) => (
+            <Link key={i} to='/ocultados'>
+              <button>{valor.name.first}</button>
+            </Link>
+          ))}
         </div>
       </div>
     </>

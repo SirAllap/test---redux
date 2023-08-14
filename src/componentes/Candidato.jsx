@@ -1,6 +1,12 @@
 import React from 'react'
 
-const Candidato = ({ index, valor, onBuscarUno, onGuardarUno }) => {
+const Candidato = ({
+  index,
+  valor,
+  onBuscarUno,
+  onGuardarUno,
+  onGuardarOculto,
+}) => {
   return (
     <>
       <div className='presentacion'>
@@ -23,7 +29,13 @@ const Candidato = ({ index, valor, onBuscarUno, onGuardarUno }) => {
             </div>
           </div>
           <div className='botones'>
-            <button onClick={() => onBuscarUno(index)} className='rojo'>
+            {/* <button onClick={() => onBuscarUno(index)} className='rojo'>
+              Ocultar
+            </button> */}
+            <button
+              onClick={() => onGuardarOculto(valor, index)}
+              className='rojo'
+            >
               Ocultar
             </button>
             <button
