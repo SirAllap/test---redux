@@ -182,6 +182,20 @@ button:hover {
   background-color: #f6a87b91;
 }
 
+.top-button-anime {
+  position: relative;
+  height: 70px;
+  width: 190px;
+  background-color: #ff4b4b;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.top-button-anime:hover {
+  background-color: #ff4b4bad;
+}
+
 .footerButtons {
   display: flex;
   justify-content: space-around;

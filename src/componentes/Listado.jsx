@@ -69,6 +69,9 @@ const Listado = () => {
         <Link to='/ocultos'>
           <button className='top-button-oculto'>Ocultos</button>
         </Link>
+        <Link to='/anime'>
+          <button className='top-button-anime'>Anime</button>
+        </Link>
       </div>
       <div className='presentacion'>
         {candidatos.map((valor, index) => (
