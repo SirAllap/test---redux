@@ -39,6 +39,10 @@ h1 {
   background-color: #f6a87bec;
   color: rgb(76, 76, 76);
 }
+.title-characters {
+  background-color: #c91c1c;
+  color: rgb(255, 255, 255);
+}
 
 img {
   min-height: 150px;
@@ -280,4 +284,14 @@ button:hover {
 }
 .ocultados .fullWidth {
   width: 100%;
+}
+
+.character-pic img {
+  height: 100px;
+  width: fit-content;
+  border: 1px solid gray;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 20px;
+  min-width: 150px;
 }
