@@ -36,6 +36,11 @@ const Gestion = () => {
         <Link to='/candidatos'>
           <button className='top-button button-candidatos'>Candidatos</button>
         </Link>
+        <Link to='/eliminados'>
+          <button className='top-button button-candidatos-eliminados'>
+            Candidatos eliminados
+          </button>
+        </Link>
       </div>
       <div className='usuarios'>
         {listaTrabajadores.map((valor, index) => (

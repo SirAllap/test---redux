@@ -5,6 +5,7 @@ import Listado from '../componentes/Listado'
 import Gestion from '../componentes/Gestion'
 import Ocultos from '../componentes/Ocultos'
 import ListOnePiece from '../componentes/ListOnePiece'
+import Eliminados from '../componentes/Eliminados'
 
 const MiRouter = () => {
   return (
@@ -16,6 +17,7 @@ const MiRouter = () => {
         <Route path='/ocultos' element={<Ocultos />} />
         <Route path='*' element={<Listado />} />
         <Route path='/anime' element={<ListOnePiece />} />
+        <Route path='/eliminados' element={<Eliminados />} />
       </Routes>
     </>
   )

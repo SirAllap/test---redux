@@ -43,7 +43,12 @@ const Trabajador = ({ valor, index, onActualizar, onEliminar }) => {
             </select>
           </div>
         </div>
-        <button onClick={() => onEliminar(valor)}>Eliminar</button>
+        <button
+          className='button-candidatos-a-eliminar'
+          onClick={() => onEliminar(valor)}
+        >
+          Eliminar
+        </button>
       </div>
     </>
   )

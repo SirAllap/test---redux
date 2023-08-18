@@ -295,3 +295,24 @@ button:hover {
   margin-right: 20px;
   min-width: 150px;
 }
+
+.button-candidatos-eliminados {
+  background-color: rgb(255, 234, 0);
+  color: black;
+}
+.button-candidatos-eliminados:hover {
+  background-color: rgba(255, 234, 0, 0.431);
+  color: black;
+}
+
+.button-candidatos-a-eliminar {
+  background-color: rgb(255, 234, 0);
+  color: black;
+  font-weight: 700;
+}
+
+.button-candidatos-a-eliminar:hover {
+  background-color: rgba(255, 234, 0, 0.431);
+  color: black;
+  font-weight: 700;
+}
